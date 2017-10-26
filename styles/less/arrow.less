@@ -1,0 +1,49 @@
+.hero-container {
+	.arrow,
+	&:before {
+		cursor: pointer;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.arrow {
+		width: 30px;
+		height: 30px;
+		left: 50%;
+		bottom: 20px;
+		margin: -20px 0 0 -20px;
+	  	transform: rotate(45deg);
+	  	border-left: none;
+	  	border-top: none;
+	  	border-right: 2px #fff solid;
+	  	border-bottom: 2px #fff solid;
+
+		  &:after {
+			content: '';
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			left: 54%;
+			bottom: 6px;
+			margin: -10px 0 0 -10px;
+			transform: rotate(0deg);
+			border-left: none;
+			border-top: none;
+			border-right: 1px #fff solid;
+			border-bottom: 1px #fff solid;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-name: arrow;
+		  }
+	}
+
+	@keyframes arrow {
+		  0% {
+		    opacity: 1;
+		  }
+		  100% {
+		    transform: translate(-10px, -10px);
+		    opacity: 0;
+		  }
+	}
+}

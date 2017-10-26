@@ -1,0 +1,145 @@
+.nav-toggle {
+position: absolute;
+top: 10px;
+right: 10px;
+width: 50px;
+height: 50px;
+box-sizing: border-box;
+cursor: pointer;
+z-index: 9;
+
+@media (min-width: 768px) {
+	display: none;
+}
+
+	span {
+		position: absolute;
+		display: block;
+		width: 30px;
+		height: 4px;
+		background: #fff;
+		top: 42%;
+		left: 17%;
+		box-shadow: 0 2px 2px rgba(0,0,0,.2);
+		border-radius: 2px;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			width: 30px;
+			height: 4px;
+			background: #fff;
+			box-shadow: 0 2px 2px rgba(0,0,0,.2);
+			border-radius: 2px;
+			transition: all 0.35s ease;
+		}
+
+		&:before {
+			top: 10px;;
+		}
+		&:after {
+			top: -10px;
+		}
+	}
+
+		&.toggle span {
+			background: transparent;
+			box-shadow: none;
+			transition: all 0.35s ease;
+		}
+
+		&.toggle span:after {
+			background: #333;
+			top:0;
+			transform: rotate(45deg);
+		}
+		&.toggle span:before {
+			background: #333;
+			top:0;
+			transform: rotate(-45deg);
+		}
+}
+	.main-navigation {
+		width: 100%;
+		background-color: #f2f2f2;
+		transform: translateX(100%);
+		transition: all 0.7s ease;
+		overflow: hidden;
+
+		@media (min-width: 768px) {
+			transform: translateX(0%);
+			height: 80px;
+			background: transparent;
+			text-transform: uppercase;
+		}
+
+			&.active {
+				.flex-display();
+				.justify-content(center);
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				transform: translateX(0%);
+				transition: all 0.3s ease-in-out;
+				z-index: 2;
+
+				li {
+					padding: .6em .4em;
+					text-transform: uppercase;
+					cursor: pointer;
+					font-size: 1.5em;
+					letter-spacing: 2px;
+
+					a {
+						color: #333;
+					}
+				}
+				svg {
+					z-index: -2;
+				}
+			}
+
+		.menu-list {
+			.flex-display();
+			.justify-content(center);
+			.flex-direction(column);
+			position: absolute;
+			top: 55px;
+			width: 100%;
+			padding: 0;
+			text-align: center;
+			transition: all 0.3s ease;
+
+			@media (min-width: 768px) {
+				.flex-display();
+				.justify-content(space-around);
+				.align-items(center);
+				.flex-direction(row);
+				top: 0;
+				right: 0;
+				margin: 0;
+				height: 100%;
+				max-width: 80%;
+				background: transparent;
+
+				li {
+					padding: .6em .4em;
+					text-transform: uppercase;
+					cursor: pointer;
+					font-size: 1.25em;
+					letter-spacing: 2px;
+
+					a {
+						&:hover {
+							color: #B18857;
+							transition: all .3s ease;
+						}
+					}
+				}
+			}
+			@media (min-width: 991px) {
+				max-width: 60%;
+			}
+		}
+	}
