@@ -3,7 +3,7 @@
 	 <form role="form" id="contact-form">
 		<div class="sell-wrapper">
 			<label for="offer">Mám zájem o </label>
-			<select name="Mám zájem o" id="offer" class="inputArea">
+			<select name="offer" id="offer" class="inputArea">
 		      <option value="Prodej dřeva">Prodej dřeva</option>
 		      <option value="Prodej dlažby">Prodej dlažby</option>
 		      <option value="Prodej cihlového materiálu">Prodej cihlového materiálu</option>
