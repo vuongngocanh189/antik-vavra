@@ -1,5 +1,5 @@
 $(document).ready(function(){
- $('.btn-form').click(function(){
+ $('.btn-form').click(function(event){
     event.preventDefault();
     $.ajax({
         dataType: "JSON",
