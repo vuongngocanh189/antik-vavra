@@ -1,6 +1,6 @@
 <?php
     require('../vendor/autoload.php');
-		$name = trim($_POST['name']);
+	    $name = trim($_POST['name']);
 	    $email = trim($_POST['email']);
 	    $message = trim($_POST['message']);
 
