@@ -5,7 +5,7 @@ $(document).ready(function(){
         dataType: "JSON",
         type: "POST",
         url: "php/form-process.php",
-        data: $("#contactForm").serialize(),
+        data: $("#contact-form").serialize(),
         beforeSend: function(xhr){
             $(".btn-form").html('ODESÍLÁM...');
         },
