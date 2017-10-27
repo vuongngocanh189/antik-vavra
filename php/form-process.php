@@ -1,14 +1,16 @@
 <?php
     require('../vendor/autoload.php');
-	    $name = trim($_POST['name']);
-	    $email = trim($_POST['email']);
-	    $message = trim($_POST['message']);
+	$offer = trim($_POST['offer']);
+    	$region = trim($_POST['region']);
+    	$name = trim($_POST['name']);
+	$email = trim($_POST['email']);
+    	$phone = trim($_POST['phone']);
+	$message = trim($_POST['message']);	
 
-    if($name != null && $email != null && $message != null){
-		if(!filter_var($email, FILTER_VALIDATE_EMAIL))
-		{
-		    $signal = 'bad';
-            $msg = 'Zlý formát e-mailu. Zkontrolujte ho, prosím.';
+    if($offer != null && $region != null && $name != null && $email != null && $phone != null && $message != null){
+		if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+			$signal = 'bad';
+            		$msg = 'Zlý formát e-mailu. Zkontrolujte ho, prosím.';
         }
         else{
             $mail = new PHPMailer;
